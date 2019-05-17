@@ -1,0 +1,7 @@
+logging:
+  level: INFO
+  loggers:
+    jobtenure: DEBUG
+defaultDatafile: /tmp/code-challenge-data.csv
+defaultEmployee: Jose Richards
+defaultCompany: EverTrue
