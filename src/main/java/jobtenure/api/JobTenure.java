@@ -166,13 +166,6 @@ public JobTenure(String content) {
      *  API: 5b: return json-formatted list of companies with average tenure
      */
     public ApiResult getTenureRanking() {
-//        TreeMap<Double, String> tenureMap = new TreeMap<>(Comparator.reverseOrder());
-//
-//        HashSet<Company> companies = Company.getCompanies();
-//        System.out.println("getTenureRanking: company count: " + companies.size());
-//        for (Company company : companies) {
-//            tenureMap.put(company.getAverageTenure(), company.getName());
-//        }
         HashMap<String, Double> tenureMap = new HashMap<>();
 
         HashSet<Company> companies = Company.getCompanies();
@@ -333,7 +326,6 @@ public JobTenure(String content) {
             new Comparator<K>() {
                 public int compare(K k1, K k2) {
                     int compare =
-//                        map.get(k1).compareTo(map.get(k2));   // sort ascending
                         map.get(k2).compareTo(map.get(k1));     // sort descending
                     if (compare == 0)
                         return 1;
