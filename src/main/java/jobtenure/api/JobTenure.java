@@ -169,11 +169,9 @@ public JobTenure(String content) {
         HashMap<String, Double> tenureMap = new HashMap<>();
 
         HashSet<Company> companies = Company.getCompanies();
-        System.out.println("getTenureRanking: company count: " + companies.size());
         for (Company company : companies) {
             tenureMap.put(company.getName(), company.getAverageTenure());
         }
-        System.out.println("getTenureRanking: tenure map count: " + tenureMap.size());
         Map sortedMap = sortByValues(tenureMap);
         return new ApiResult(sortedMap);
     }

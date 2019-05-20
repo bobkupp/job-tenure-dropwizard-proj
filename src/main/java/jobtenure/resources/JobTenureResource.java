@@ -9,6 +9,19 @@ import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import java.util.Optional;
 
+/*
+ * generate dataset API:
+ *
+ * generates a random dataset that gives each of the people in the
+ * csv 0-3 jobs and draws from the specified companies/positions. This is runnable
+ * by calling this API so that it can be used to generate a unique dataset by specifying a
+ * different csv data file
+ *
+ * getEmployeeInfo:
+ * arg: String file - full, absolute path to csv file to import employee data from
+ *
+ * return: JobTenure.ApiResult object with constructed dataset
+ */
 @Path("/job-tenure/generate-dataset")
 @Produces(MediaType.APPLICATION_JSON)
 public class JobTenureResource {

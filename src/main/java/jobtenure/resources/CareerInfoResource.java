@@ -9,6 +9,17 @@ import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import java.util.Optional;
 
+/*
+ * career info API:
+ *
+ * Returns a json formatted list of objects representing a person's career
+ * data in order from most recent to least recent
+ *
+ * getEmployeeInfo:
+ * arg: String employee - employee whose data should be retrieved
+ *
+ * return: JobTenure.ApiResult object with employee data
+ */
 @Path("/job-tenure/career-info")
 @Produces(MediaType.APPLICATION_JSON)
 public class CareerInfoResource {
