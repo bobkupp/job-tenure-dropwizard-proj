@@ -8,6 +8,16 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
+/*
+ * company retention data API:
+ *
+ * Returns a json formatted list of objects ranking each company by retention, giving
+ *  the average number of years people work at each company
+ *
+ * getCompanyRetentionData:
+ *
+ * return: JobTenure.ApiResult object with company tenure ranking data
+ */
 @Path("/job-tenure/company-retention")
 @Produces(MediaType.APPLICATION_JSON)
 public class CompanyRetentionResource {
